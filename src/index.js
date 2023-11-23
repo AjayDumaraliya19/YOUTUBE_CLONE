@@ -9,10 +9,6 @@ connectDB()
     app.listen(process.env.PORT || 8080, () => {
       console.log(`Server Running at port : ${process.env.PORT}`);
     });
-    app.on((err) => {
-      console.log(`Server Port Running Error : ${err}`);
-      throw err;
-    });
   })
   .catch((err) => {
     console.log(`MongoDB Connetion Failed..! : ${err}`);
